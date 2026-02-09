@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
 import valentineRoses from "@/assets/valentine-roses.png";
 import valentineBear from "@/assets/valentine-bear.png";
+import valentineGift from "@/assets/valentine-gift.png";
+import valentineLetter from "@/assets/valentine-letter.png";
 
 const floatingItems = [
   { src: valentineRoses, left: "5%", delay: 0, duration: 7, size: 80, opacity: 0.15, rotate: 12 },
   { src: valentineBear, left: "85%", delay: 2, duration: 8, size: 70, opacity: 0.12, rotate: -8 },
-  { src: valentineRoses, left: "45%", delay: 4, duration: 9, size: 60, opacity: 0.1, rotate: 20 },
-  { src: valentineBear, left: "20%", delay: 1, duration: 6, size: 90, opacity: 0.13, rotate: -15 },
+  { src: valentineGift, left: "45%", delay: 4, duration: 9, size: 65, opacity: 0.12, rotate: 20 },
+  { src: valentineLetter, left: "20%", delay: 1, duration: 6, size: 75, opacity: 0.13, rotate: -15 },
   { src: valentineRoses, left: "70%", delay: 3, duration: 7.5, size: 65, opacity: 0.11, rotate: 5 },
   { src: valentineBear, left: "55%", delay: 5, duration: 8.5, size: 75, opacity: 0.14, rotate: -10 },
+  { src: valentineGift, left: "35%", delay: 6, duration: 7, size: 55, opacity: 0.1, rotate: 15 },
+  { src: valentineLetter, left: "90%", delay: 3.5, duration: 8, size: 60, opacity: 0.11, rotate: -5 },
 ];
 
 const hearts = Array.from({ length: 10 }, (_, i) => ({
