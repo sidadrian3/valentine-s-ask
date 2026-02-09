@@ -1,8 +1,8 @@
 import { useState, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Heart } from "lucide-react";
-import PhotoFrame from "@/components/PhotoFrame";
+import { motion } from "framer-motion";
 import FloatingHearts from "@/components/FloatingHearts";
+import valentineRoses from "@/assets/valentine-roses.png";
+import valentineBear from "@/assets/valentine-bear.png";
 
 const wittyNoTexts = [
   "No 😢",
@@ -50,13 +50,20 @@ const Index = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-primary mb-4">
             Yaaaay!! 🥰
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 mb-8" style={{ fontFamily: "var(--font-body)" }}>
+          <p
+            className="text-xl md:text-2xl text-foreground/80 mb-8"
+            style={{ fontFamily: "var(--font-body)" }}
+          >
             I knew you'd say yes! You just made me the happiest person ever 💕
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <PhotoFrame label="Us 💕" />
-            <PhotoFrame label="Our fav moment ✨" />
-          </div>
+          <motion.img
+            src={valentineBear}
+            alt="Cute bear with heart"
+            className="w-56 h-56 mx-auto rounded-2xl shadow-lg object-cover"
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          />
         </motion.div>
       </div>
     );
@@ -90,9 +97,12 @@ const Index = () => {
           I have a very important question for you
         </p>
 
-        <div className="mb-8">
-          <PhotoFrame label="Put our pic here 📸" />
-        </div>
+        <motion.img
+          src={valentineRoses}
+          alt="Valentine roses bouquet"
+          className="w-52 h-52 mx-auto rounded-2xl shadow-lg object-cover mb-8"
+          whileHover={{ scale: 1.05, rotate: 2 }}
+        />
 
         <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-8">
           Will you be my Valentine? 💘
@@ -116,7 +126,10 @@ const Index = () => {
             transition={{ type: "spring", stiffness: 300, damping: 15 }}
             onClick={handleNo}
             className="bg-muted text-muted-foreground font-bold py-3 px-8 rounded-full text-lg hover:bg-muted/80 transition-colors"
-            style={{ fontFamily: "var(--font-body)", fontSize: Math.max(16 - noCount * 1, 10) }}
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: Math.max(16 - noCount * 1, 10),
+            }}
           >
             {wittyNoTexts[Math.min(noCount, wittyNoTexts.length - 1)]}
           </motion.button>
