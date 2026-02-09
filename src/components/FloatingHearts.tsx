@@ -1,19 +1,30 @@
 import { motion } from "framer-motion";
+import valentineRoses from "@/assets/valentine-roses.png";
+import valentineBear from "@/assets/valentine-bear.png";
 
-const hearts = Array.from({ length: 12 }, (_, i) => ({
+const floatingItems = [
+  { src: valentineRoses, left: "5%", delay: 0, duration: 7, size: 80, opacity: 0.15, rotate: 12 },
+  { src: valentineBear, left: "85%", delay: 2, duration: 8, size: 70, opacity: 0.12, rotate: -8 },
+  { src: valentineRoses, left: "45%", delay: 4, duration: 9, size: 60, opacity: 0.1, rotate: 20 },
+  { src: valentineBear, left: "20%", delay: 1, duration: 6, size: 90, opacity: 0.13, rotate: -15 },
+  { src: valentineRoses, left: "70%", delay: 3, duration: 7.5, size: 65, opacity: 0.11, rotate: 5 },
+  { src: valentineBear, left: "55%", delay: 5, duration: 8.5, size: 75, opacity: 0.14, rotate: -10 },
+];
+
+const hearts = Array.from({ length: 10 }, (_, i) => ({
   id: i,
   left: `${Math.random() * 100}%`,
   delay: Math.random() * 5,
   duration: 4 + Math.random() * 4,
   size: 12 + Math.random() * 16,
-  opacity: 0.15 + Math.random() * 0.25,
+  opacity: 0.15 + Math.random() * 0.2,
 }));
 
 const FloatingHearts = () => (
   <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
     {hearts.map((h) => (
       <motion.div
-        key={h.id}
+        key={`heart-${h.id}`}
         className="absolute text-primary"
         style={{ left: h.left, bottom: -30, fontSize: h.size, opacity: h.opacity }}
         animate={{ y: [0, -window.innerHeight - 60], x: [0, Math.sin(h.id) * 40] }}
@@ -21,6 +32,34 @@ const FloatingHearts = () => (
       >
         ♥
       </motion.div>
+    ))}
+    {floatingItems.map((item, i) => (
+      <motion.img
+        key={`img-${i}`}
+        src={item.src}
+        alt=""
+        className="absolute rounded-full"
+        style={{
+          left: item.left,
+          bottom: -item.size,
+          width: item.size,
+          height: item.size,
+          opacity: item.opacity,
+          rotate: `${item.rotate}deg`,
+          objectFit: "cover",
+        }}
+        animate={{
+          y: [0, -window.innerHeight - item.size - 60],
+          x: [0, Math.sin(i * 2) * 50],
+          rotate: [item.rotate, item.rotate + 360],
+        }}
+        transition={{
+          duration: item.duration,
+          delay: item.delay,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
     ))}
   </div>
 );
