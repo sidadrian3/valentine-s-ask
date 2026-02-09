@@ -5,14 +5,14 @@ import valentineRoses from "@/assets/valentine-roses.png";
 import valentineBear from "@/assets/valentine-bear.png";
 
 const wittyNoTexts = [
-  "No 😢",
-  "Are you sure? 🥺",
-  "Think again... 💔",
-  "Pretty please? 🥹",
-  "I'll cry... 😭",
-  "Don't do this 😿",
-  "My heart... 💀",
-  "Last chance! 🫠",
+  "No!",
+  "Sure na ba?",
+  "Think again...",
+  "Pretty pleasheu?",
+  "PLEASEPLEASEPLEASE",
+  "Don't do this",
+  "My hearteuuu ",
+  "Last chanceu lab ",
 ];
 
 const Index = () => {
@@ -105,8 +105,12 @@ const Index = () => {
         />
 
         <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-8">
-          Will you be my Valentine? 💘
+          Will you be my Valentine?
         </h2>
+
+        <h3 className="text-xl md:text-2  xl  text-foreground mb-8">
+          everyday is valentine's day with you though...
+        </h3>
 
         <div className="flex items-center justify-center gap-4 flex-wrap relative">
           <motion.button
@@ -142,7 +146,7 @@ const Index = () => {
             className="mt-4 text-sm text-muted-foreground"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            psst... the Yes button is getting bigger, just saying 👀
+            LALAKI LANG TOOOHH
           </motion.p>
         )}
       </motion.div>
