@@ -8,13 +8,13 @@ import catcute from "@/assets/catcute.png";
 import catHeart from "@/assets/cat_heart.jpg";
 
 const floatingItems = [
-  { src: catflower, left: "5%", delay: 0, duration: 7, size: 80, opacity: 0.15, rotate: 12 },
-  { src: poodleflowers, left: "85%", delay: 2, duration: 8, size: 70, opacity: 0.12, rotate: -8 },
-  { src: dogflowers, left: "45%", delay: 4, duration: 9, size: 65, opacity: 0.12, rotate: 20 },
-  { src: selfiedogs, left: "20%", delay: 1, duration: 6, size: 75, opacity: 0.13, rotate: -15 },
-  { src: doghoodie, left: "70%", delay: 3, duration: 7.5, size: 65, opacity: 0.11, rotate: 5 },
-  { src: catcute, left: "55%", delay: 5, duration: 8.5, size: 75, opacity: 0.14, rotate: -10 },
-  { src: catHeart, left: "35%", delay: 6, duration: 7, size: 55, opacity: 0.1, rotate: 15 },
+  { src: catflower, left: "5%", delay: 0, duration: 7, size: 120, opacity: 0.15, rotate: 12 },
+  { src: poodleflowers, left: "85%", delay: 2, duration: 8, size: 110, opacity: 0.12, rotate: -8 },
+  { src: dogflowers, left: "45%", delay: 4, duration: 9, size: 100, opacity: 0.12, rotate: 20 },
+  { src: selfiedogs, left: "20%", delay: 1, duration: 6, size: 115, opacity: 0.13, rotate: -15 },
+  { src: doghoodie, left: "70%", delay: 3, duration: 7.5, size: 105, opacity: 0.11, rotate: 5 },
+  { src: catcute, left: "55%", delay: 5, duration: 8.5, size: 115, opacity: 0.14, rotate: -10 },
+  { src: catHeart, left: "35%", delay: 6, duration: 7, size: 95, opacity: 0.1, rotate: 15 },
 ];
 
 const hearts = Array.from({ length: 10 }, (_, i) => ({
