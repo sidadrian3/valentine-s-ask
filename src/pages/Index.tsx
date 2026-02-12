@@ -17,7 +17,9 @@ const wittyNoTexts = [
 ];
 
 const Index = () => {
-  const [step, setStep] = useState<"letter" | "message" | "question" | "accepted">("letter");
+  const [step, setStep] = useState<
+    "letter" | "message" | "question" | "accepted"
+  >("letter");
   const [noCount, setNoCount] = useState(0);
   const [noPos, setNoPos] = useState<{ x: number; y: number } | null>(null);
 
@@ -46,7 +48,7 @@ const Index = () => {
           <motion.img
             src={poodleflowers}
             alt="A letter for you"
-            className="w-52 h-52 md:w-64 md:h-64 mx-auto rounded-2xl shadow-lg object-cover"
+            className="w-80 h-80 md:w-64 md:h-64 mx-auto rounded-2xl shadow-lg object-cover"
             whileHover={{ scale: 1.08, rotate: 3 }}
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -58,7 +60,7 @@ const Index = () => {
             className="mt-6 text-lg text-muted-foreground"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Tap to open 💌
+            OPENOPENOPENOPEN
           </motion.p>
         </motion.div>
       </div>
@@ -81,11 +83,9 @@ const Index = () => {
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ repeat: Infinity, duration: 2 }}
             className="text-6xl mb-6"
-          >
-            💕
-          </motion.div>
-          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4">
-            I know you are already mine, but...
+          ></motion.div>
+          <h1 className="text-8xl md:text-8xl font-bold text-primary mb-4">
+            I know you're already minee, but...
           </h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -94,7 +94,7 @@ const Index = () => {
             className="mt-8 text-lg text-muted-foreground"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Tap to continue 💗
+            PRESSSSSS IT PLEASEEEE
           </motion.p>
         </motion.div>
       </div>
@@ -116,22 +116,24 @@ const Index = () => {
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ repeat: Infinity, duration: 1.2 }}
             className="text-7xl mb-6"
-          >
-            ❤️
-          </motion.div>
+          ></motion.div>
           <h1 className="text-5xl md:text-7xl font-bold text-primary mb-4">
-            Yaaaay!! 🥰
+            YESSSSSSSSSSSS!! I LOVE YOU SO MUCHO!
           </h1>
           <p
-            className="text-xl md:text-2xl text-foreground/80 mb-8"
+            className="text-lg md:text-2xl text-foreground/80 mb-8 min-w-6"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            I knew you'd say yes! You just made me the happiest person ever 💕
+            Thankseu love! I wish we could be together not only for this
+            valentine's day but everyday.. Anyways, I know work and life has
+            been hard for you lately, but I want you to know that nandito lang
+            ako no matter what. I love you so much and I miss you always~
+            PLEASEEEEPLEASEEE LETMEBUY YOU FOOD THIS VALENTINES DAYYYYYYY...
           </p>
           <motion.img
             src={selfiedogs}
             alt="Cute bear with heart"
-            className="w-56 h-56 mx-auto rounded-2xl shadow-lg object-cover"
+            className="w-80 h-80 mx-auto rounded-2xl shadow-lg object-cover"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -155,22 +157,23 @@ const Index = () => {
           animate={{ rotate: [0, 10, -10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           className="text-6xl mb-4"
-        >
-          🌹
-        </motion.div>
+        ></motion.div>
 
         <motion.img
           src={dogflowers}
           alt="Valentine roses bouquet"
-          className="w-52 h-52 mx-auto rounded-2xl shadow-lg object-cover mb-8"
+          className="w-80 h-80 mx-auto rounded-2xl shadow-lg object-cover mb-8"
           whileHover={{ scale: 1.05, rotate: 2 }}
         />
 
-        <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+        <h2 className="text-6xl md:text-6xl font-bold text-foreground mb-4">
           Will you be my Valentine?
         </h2>
 
-        <h3 className="text-xl text-foreground/70 mb-8" style={{ fontFamily: "var(--font-body)" }}>
+        <h3
+          className="text-xl text-foreground/70 mb-8"
+          style={{ fontFamily: "var(--font-body)" }}
+        >
           everyday is valentine's day with you though...
         </h3>
 
@@ -183,7 +186,7 @@ const Index = () => {
             className="bg-primary text-primary-foreground font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-shadow"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Yes! 💖
+            YES!
           </motion.button>
 
           <motion.button
