@@ -1,9 +1,9 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import FloatingHearts from "@/components/FloatingHearts";
-import valentineRoses from "@/assets/valentine-roses.png";
-import valentineBear from "@/assets/valentine-bear.png";
-import valentineLetter from "@/assets/valentine-letter.png";
+import dogflowers from "@/assets/dogflowers.png";
+import selfiedogs from "@/assets/selfiedogs.png";
+import poodleflowers from "@/assets/poodleflowers.png";
 
 const wittyNoTexts = [
   "No!",
@@ -44,7 +44,7 @@ const Index = () => {
           onClick={() => setStep("message")}
         >
           <motion.img
-            src={valentineLetter}
+            src={poodleflowers}
             alt="A letter for you"
             className="w-52 h-52 md:w-64 md:h-64 mx-auto rounded-2xl shadow-lg object-cover"
             whileHover={{ scale: 1.08, rotate: 3 }}
@@ -129,7 +129,7 @@ const Index = () => {
             I knew you'd say yes! You just made me the happiest person ever 💕
           </p>
           <motion.img
-            src={valentineBear}
+            src={selfiedogs}
             alt="Cute bear with heart"
             className="w-56 h-56 mx-auto rounded-2xl shadow-lg object-cover"
             initial={{ y: 30, opacity: 0 }}
@@ -160,7 +160,7 @@ const Index = () => {
         </motion.div>
 
         <motion.img
-          src={valentineRoses}
+          src={dogflowers}
           alt="Valentine roses bouquet"
           className="w-52 h-52 mx-auto rounded-2xl shadow-lg object-cover mb-8"
           whileHover={{ scale: 1.05, rotate: 2 }}
